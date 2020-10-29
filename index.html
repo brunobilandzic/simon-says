@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Simon Says Beta</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+  <link rel="icon" href="images/favicon.ico">
+</head>
+
+<body>
+
+
+  <div class="container">
+    <span class="info-button pointer">Rules</span>
+    <h1 id="level-title">Press to Start</h1>
+    <div class="info-container pop-up hidden">
+      <h2>Rules:</h2>
+      <ul class="rules-list">
+        <li>
+          <p>
+            One colour will blink
+          </p>
+        </li>
+        <li>
+          <p>Repeat all plus new colour each level</p>
+        </li>
+      </ul>
+      <button type="button" class="cancel-info-btn nav-btn">Close</button>
+
+    </div>
+    <div class="score-container score-container-style pop-up hidden">
+      <h2>Game Over</h2>
+      <p>
+        You scored <b><span class="score"></span></b>
+      </p>
+      <div class="submit-score" action="" method="post">
+        <p class="submit-text">
+          You had to press <span class="had-to-press"></span>.
+          Satisfied? Provide username and submit.<br />Or, play again.
+        </p>
+        <div class="user-input">
+          <label class="user-name-input-label" for="user-name-input">User:</label>
+          <input id="user-name-input" type="text" name="uName" value="" placeholder="">
+          <input class="score-to-send" type="hidden" name="score" value="">
+        </div>
+
+        <div class="submit-buttons">
+          <button class="submit-btn nav-btn" type="submit">Submit</button>
+          <button class="play-again-btn nav-btn" type="button" name="button">Play Again</button>
+        </div>
+
+      </div>
+    </div>
+
+    <div lass="row">
+
+      <div type="button" id="green" class="btn green">
+
+      </div>
+
+      <div type="button" id="red" class="btn red">
+
+      </div>
+    </div>
+
+    <div class="row">
+
+      <div type="button" id="yellow" class="btn yellow">
+
+      </div>
+      <div type="button" id="blue" class="btn blue">
+
+      </div>
+
+    </div>
+    <div class="highscore-container">
+      <h2 class="highscore-header"><span class="trophy">Today's Highscores</h2>
+      <table class="highscore-table">
+        <tr class="table-head">
+          <th>
+            user
+          </th>
+          <th>
+            score
+          </th>
+          <th>
+            time
+          </th>
+        </tr>
+        <tr id="d1">
+
+        </tr>
+        <tr id="d2">
+
+        </tr>
+        <tr id="d3">
+
+        </tr>
+        <tr id="d4">
+
+        </tr>
+        <tr id="d5">
+
+        </tr>
+        <tr id="d6">
+
+        </tr>
+        <tr id="d7">
+
+        </tr>
+        <tr id="d8">
+
+        </tr>
+        <tr id="d9">
+
+        </tr>
+        <tr id="d10">
+
+        </tr>
+      </table>
+      <div class="count-container">
+        <p>
+          All players submited <span id="day-count"></span> scores today.
+        </p>
+      </div>
+      <h2 class="highscore-header"><span class="trophy">🏆</span> Hall Of Fame <span class="trophy">🏆</span></h2>
+      <table class="highscore-table">
+        <tr class="table-head">
+          <th>
+            user
+          </th>
+          <th>
+            score
+          </th>
+          <th>
+            time
+          </th>
+        </tr>
+        <tr id="1">
+
+        </tr>
+        <tr id="2">
+
+        </tr>
+        <tr id="3">
+
+        </tr>
+        <tr id="4">
+
+        </tr>
+        <tr id="5">
+
+        </tr>
+        <tr id="6">
+
+        </tr>
+        <tr id="7">
+
+        </tr>
+        <tr id="8">
+
+        </tr>
+        <tr id="9">
+
+        </tr>
+        <tr id="10">
+
+        </tr>
+      </table>
+    </div>
+  </div>
+  <div class="count-container">
+    <p>
+      All players submited <span id="count"></span> scores in total.
+    </p>
+  </div>
+  <footer class="copyright-haha">
+    &copy; flwhoolb
+  </footer>
+  <script src="https://kit.fontawesome.com/740cb2f17b.js" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="game.js" charset="utf-8"></script>
+</body>
+
+</html>
